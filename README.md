@@ -7,6 +7,16 @@ PartnerCompany, Contractor and Client
 - Simple UI with bootstrap
 - CRUD for all models
 
+##	Note
+
+I have also implemented an employee export function for generating the employees xls file. The function is available on employees page.
+
+Create Employees in bulk function needs two params. The company_id and no of dummy employees to be created. I could not associate clients in bulk insert because rails insert_all method returning param is not supported in sqllite. So i could not get the ids of employees being created.
+
+Import Employeees function performance can also be improved by using the same function but due to time constraints i could not do that. 
+
+Error handling in import function is done right now by just raising exceptions. 
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -25,13 +35,18 @@ $ bundle update
 
 https://edgeguides.rubyonrails.org/upgrading_ruby_on_rails.html
 
+### Ruby and Rails version
+
+* 3.0.1
+* 6.1.4
+
 
 ### Installing
 
 Clone git repository and run bundle install:
 
 ```
-$ git clone git@github.com:nicosticht/client_dashboard.git
+$ git clone git@github.com:falak/client_dashboard.git
 $ bundle install
 ```
 
@@ -47,13 +62,6 @@ Run the rails server:
 $ rails s
 ```
 
-## Running the tests
-
-To run the tests execute following statement:
-
-```
-$ bundle exec rake
-```
 
 
 ## License
